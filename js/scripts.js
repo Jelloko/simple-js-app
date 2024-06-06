@@ -1,5 +1,5 @@
-alert('Hello world');
-
-//My favorite food using a variable
-let favoriteFood = 'Pizza';
-document.write(favoriteFood)
+let pokemonList = [
+    { pokemon: 'Nidoran', height: '0.5m', type: 'Poison'}
+    { pokemon: 'Poliwag', height: '0.6m', type: 'Water'}
+    { pokemon: 'Voltorb', height: '0.5m', type: 'Electric'}
+]
