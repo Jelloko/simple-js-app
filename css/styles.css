@@ -2,3 +2,14 @@ body {
     line-height: 1.5;
     font-size: 18px
 }
+.button-class {
+    border: none;
+    font-family: inherit;
+    background-color:#FF505F;
+    color: #000066;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+
+
+}
