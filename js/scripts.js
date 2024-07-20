@@ -16,9 +16,9 @@ let pokemonRepository = (function () {
 // function to showdetails of pokemon
    function showDetails(pokemon){
     loadDetails(pokemon).then(function() {
-      console.log(pokemon);
-  });
-  }
+      showModal(pokemon.name, 'Height: ' + pokemon.height,pokemon.imageUrl);
+    });
+}
 
 // Function to make a list of buttons for pokemon and show details
    function addListItem(pokemon){
@@ -63,6 +63,62 @@ let pokemonRepository = (function () {
       console.error(e);
     });
   }
+
+  function showModal(title, text, img) {
+    let modalContainer = document.querySelector('#modal-container');
+  
+    // Clear all existing modal content
+    modalContainer.innerHTML = '';
+  
+    let modal = document.createElement('div');
+    modal.classList.add('modal');
+  
+    // Add the new modal content
+    let closeButtonElement = document.createElement('button');
+    closeButtonElement.classList.add('modal-close');
+    closeButtonElement.innerText = 'Close';
+    closeButtonElement.addEventListener('click', hideModal);
+    
+    let titleElement = document.createElement('h1');
+    titleElement.innerText = title;
+  
+    let contentElement = document.createElement('p');
+    contentElement.innerText = text;
+
+    let imageElement = document.createElement('img');
+    imageElement.setAttribute('src', img);
+    imageElement.setAttribute("width", "100%");
+    imageElement.setAttribute("height", "100%");
+  
+    modal.appendChild(closeButtonElement);
+    modal.appendChild(titleElement);
+    modal.appendChild(contentElement);
+    modal.appendChild(imageElement);
+    modalContainer.appendChild(modal);
+  
+    modalContainer.classList.add('is-visible');
+    
+    modalContainer.addEventListener('click', (e) => {
+      let target = e.target;
+      if (target === modalContainer) {
+        hideModal();
+      }
+    });
+  }
+
+  function hideModal() {
+    let modalContainer = document.querySelector('#modal-container');
+    modalContainer.classList.remove('is-visible');
+  }
+
+  window.addEventListener('keydown', (e) => {
+    let modalContainer = document.querySelector('#modal-container');
+    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+      hideModal();  
+    }
+  });
+
+
 
 // All possible returns for functions
     return {
