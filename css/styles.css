@@ -1,8 +1,11 @@
+
 body {
     line-height: 1.5;
+    background-color: cyan;
     font-size: 18px
 }
-.button-class {
+
+.btn {
     border: #000066;
     font-family: inherit;
     background-color:#FF505F;
@@ -40,31 +43,25 @@ body {
     text-align: center;
   }
 
-  .modal {
-    margin: auto;
-    display: inline-block;
-    box-sizing: border-box;
-    background: #fff;
-    padding: 15px;
-    width: 20%;
-    max-width: 700px;
-    text-align: left;
-    image-rendering: auto;
-  }
-
-  .modal-close {
-    float: right;
-    border: 0;
-    background: none;
-    color: #777;
-    text-decoration: underline;
-  }
-
-  .pokemon-list {
+  .list-group {
     list-style-type: none;
     text-align: center;
-   
+    scale: 80%;
+    margin-top: -250px;
     
+  }
+
+  .img-fluid {
+    max-width: fit-content;
+    height: auto;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
   }
 
   h1 {
