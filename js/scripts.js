@@ -108,3 +108,4 @@ let pokemonRepository = (function () {
     pokemonRepository.addListItem(pokemon)
   });
 })
+
