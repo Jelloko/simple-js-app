@@ -5,5 +5,5 @@ This project is an app that shows a list of buttons with pokemon names. Clicking
 This project uses Jquery: https://code.jquery.com/jquery-3.3.1.min.js
 This project uses an api: https://pokeapi.co/api/v2/pokemon/?limit=25
 
-Find it on Github pages: https://jelloko.github.io/simple-js-app/
+Find it on Github Pages: https://jelloko.github.io/simple-js-app/
 [Website Image](/Images/Pokeweb.png)
